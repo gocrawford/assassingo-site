@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+
+const explainer = `
+
+# Privacy Policy for AssassinGo
+
+**Last Updated: April 2025**
+
+## Introduction
+
+Welcome to AssassinGo! This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
+
+We take your privacy seriously. Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the application.
+
+## Information We Collect
+
+### Personal Data
+
+We may collect personally identifiable information, such as:
+- Name
+- Email address
+- Profile photos
+- Device information (device ID, operating system)
+
+### Game Data
+
+We collect information related to your game activities, including:
+- Photos taken within the app for "kill" verification
+- Game statistics and scores
+- Team associations
+- In-game activities and assignments
+
+### How We Collect Information
+
+Information is collected in several ways:
+- When you register for an account
+- When you create or join games
+- When you take photos to verify "kills"
+- Through automated technologies such as cookies and analytics tools
+
+## Use of Your Information
+
+We use the information we collect to:
+- Create and manage your account
+- Facilitate gameplay and matchmaking
+- Verify "kills" and maintain game integrity
+- Improve our application and user experience
+- Send you notifications about game events
+- Maintain leaderboards and activity feeds
+- Address technical issues and provide support
+
+## Third-Party Services
+
+Our application uses third-party services:
+- **Google Firebase** for authentication, database storage, and analytics
+- **Apple TestFlight** for beta testing (if applicable)
+- **Push notification services** to deliver game notifications
+
+Each third-party service operates under its own privacy policy. We encourage you to review these policies.
+
+## Data Sharing and Disclosure
+
+We may share your information with:
+- Other players as necessary for gameplay (e.g., displaying your username, profile photo, and game statistics)
+- Service providers who help us operate the app
+- Law enforcement or other parties when required by law
+
+We will not sell your personal information to third parties.
+
+## Data Security
+
+We implement reasonable security measures to protect your personal information from unauthorized access, alteration, or disclosure. However, no internet or electronic storage method is 100% secure, and we cannot guarantee absolute security.
+
+## Data Retention
+
+We retain your personal information for as long as your account is active or as needed to provide you with our services. We may retain certain information as required by law or for legitimate business purposes.
+
+## Children's Privacy
+
+The app is not intended for children under 13 years of age. We do not knowingly collect information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
+
+## Your Rights
+
+Depending on your location, you may have rights regarding your personal data, including:
+- The right to access the personal information we hold about you
+- The right to correct inaccurate information
+- The right to request deletion of your data
+- The right to restrict or object to our processing of your data
+- The right to data portability
+
+To exercise these rights, please contact us using the information provided below.
+
+## Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
+
+## Contact Us
+
+If you have questions or concerns about this Privacy Policy, please contact us at:
+
+Email: privacy@assassingo.com
+
+
+`;
+---
+
+<Layout title="AssassinGo Privacy Policy">
+    <ContextAlert class="mb-8" />
+    <h1 class="mb-10">AssassinGo: Privacy Policy</h1>
+    <Markdown content={explainer} class="mb-10 text-lg" />
+</Layout>
