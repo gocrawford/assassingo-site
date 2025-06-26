@@ -99,8 +99,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 
 If you have questions or concerns about this Privacy Policy, please contact us at:
 
-Email: privacy@assassingo.com
-
+Email: <span id="email-contact">Loading...</span>
 
 `;
 ---
@@ -109,4 +108,28 @@ Email: privacy@assassingo.com
     <ContextAlert class="mb-8" />
     <h1 class="mb-10">AssassinGo: Privacy Policy</h1>
     <Markdown content={explainer} class="mb-10 text-lg" />
+    
+    <script>
+        // Email obfuscation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailElement = document.getElementById('email-contact');
+            if (emailElement) {
+                // Construct email address parts
+                const user = 'privacy';
+                const domain = 'assassingo';
+                const tld = 'com';
+                const emailAddress = user + '@' + domain + '.' + tld;
+                
+                // Create clickable email link
+                const emailLink = document.createElement('a');
+                emailLink.href = 'mailto:' + emailAddress;
+                emailLink.textContent = emailAddress;
+                emailLink.className = 'text-blue-600 hover:text-blue-800 underline';
+                
+                // Replace the placeholder text
+                emailElement.innerHTML = '';
+                emailElement.appendChild(emailLink);
+            }
+        });
+    </script>
 </Layout>
